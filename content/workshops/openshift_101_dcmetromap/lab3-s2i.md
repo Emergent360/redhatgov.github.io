@@ -63,7 +63,7 @@ Select 'advanced options'
 <p>
 <table>
 <tr><td><b>Name</b></td><td>dc-metro-map</td></tr>
-<tr><td><b>Git Repository URL</b></td><td><a href>https://github.com/RedHatGov/openshift-workshops.git</a></td></tr>
+<tr><td><b>Git Repository URL</b></td><td><a href="https://github.com/RedHatGov/openshift-workshops.git">https://github.com/RedHatGov/openshift-workshops.git</a></td></tr>
 <tr><td><b>Context Dir</b></td><td>/dc-metro-map</td></tr>
 </table>
 </p>
