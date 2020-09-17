@@ -29,9 +29,9 @@ A playbook can have multiple plays and a play can have one or multiple tasks.  T
 
 Let's clone a source code repository locally to get the sample playbook.
 
+
 [source,bash]
 ----
-cd ~
 ansible localhost -m git -a "repo=https://github.com/RedHatGov/workshop.artifacts.git dest=artifacts"
 ----
 
@@ -39,7 +39,7 @@ Now, let's run a playbook.  This playbook will open firewall ports on the remote
 
 [source,bash]
 ----
-ansible-playbook -i hosts artifacts/playbooks/firewall-open-http.yml --private-key=~/.ssh/gdit-tower
+ansible-playbook -i hosts artifacts/playbooks/firewall-open-http.yml
 ----
 
 == Section 2: Creating a directory structure and files for your own playbook
@@ -66,7 +66,10 @@ cd ~/apache_basic
 Use `vi` or `vim` to open a file called `install_apache.yml`
 
 
-
+[source,bash]
+----
+vim install_apache.yml
+----
 
 == Section 2: Defining Your play
 
