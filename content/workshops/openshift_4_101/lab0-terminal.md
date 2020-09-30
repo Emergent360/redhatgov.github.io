@@ -28,7 +28,7 @@ First let's create a new project to do our workshop work in.  We will use the st
 
 > Click on the "Create Project" button and give it a name of terminal-{{< span userid "YOUR#" >}}
 
-> Populate "Name" with "terminal-{{< span userid "YOUR#" >}}" and populate "Description" boxes with whatever you like.  And click "Create"
+> Populate "Display Name" with "terminal-{{< span userid "YOUR#" >}}" and populate "Description" boxes with whatever you like.  And click "Create"
 
 <img src="../images/ocp-admin-create-project.png" width="600"><br/><br>
 
