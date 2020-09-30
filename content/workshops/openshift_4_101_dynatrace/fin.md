@@ -1,7 +1,7 @@
 ---
 title: Fin.
-workshops: openshift_4_101
-workshop_weight: 20
+workshops: openshift_4_101_dynatrace
+workshop_weight: 23
 layout: lab
 ---
 
