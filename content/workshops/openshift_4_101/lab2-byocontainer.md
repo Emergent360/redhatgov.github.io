@@ -22,7 +22,7 @@ $ oc new-app sonatype/nexus:oss
 ```
 
 <blockquote>
-The output should show something *similar* to below:
+The output should show something <i>similar</i> to below:
 </blockquote>
 
 ```bash
@@ -70,22 +70,28 @@ $ oc expose svc/nexus
 <blockquote>
 Switch to "Developer" mode, by clicking on the menu, in the top left corner, where it says "Administrator", and pick "Developer"
 </blockquote>
-<img src="../images/ocp-switch-developer.png" width="500"><br/>
+<img src="../images/ocp-switch-developer.png" width="500"><br/><br/>
+ 
+ <blockquote>
+ Select the demo-{{< span2 "userid" "YOUR#" >}} project.
+ </blockquote>
+ <img src="../images/ocp-switch-project.png" width="500"><br/><br/>
+
 
 <blockquote>
 Click "+Add"
 </blockquote>
-<img src="../images/ocp-addToProjectButton.png" width="450"><br/>
+<img src="../images/ocp-addToProjectButton.png" width="500"><br/><br/>
 
 <blockquote>
 Click "Container Image", to add an existing image from the container registry
 </blockquote>
-<img src="../images/ocp-ContainerImageButton.png" width="300"><br/>
+<img src="../images/ocp-ContainerImageButton.png" width="300"><br/><br/>
 
 <blockquote>
 Select the option for "Image name from external registry" and enter "sonatype/nexus:oss", then ensure that the image is validated.
 </blockquote>
-<img src="../images/ocp-nexus-imagename-expand.png" width="800"><br/>
+<img src="../images/ocp-nexus-imagename-expand.png" width="800"><br/><br/>
 
 <blockquote>
 Enter the values shown, in the image above.
@@ -112,6 +118,8 @@ Click "Create"
 
 ```bash
 $ oc project demo-{{< span userid "YOUR#" >}}
+```
+```bash
 $ oc get all
 ```
 
@@ -169,11 +177,12 @@ You will get a new browser window or tab, containing the following:
 
 Good work - this error is expected; since the nexus console is on /nexus
 
-Go to this URL:
+## Copy and paste this URL into your browser to access the nexus console:
+``
+{{< rhocpuri4app "http://" "nexus-demo-" "/nexus/" >}}
+``
 
-## {{< rhocpuri4app "http://" "nexus-demo-" "/nexus/" >}}
-
-... to get the Nexus console.  Of course, we have not provided persistent storage; so, any and all work will be lost.
+Of course, we have not provided persistent storage; so, any and all work will be lost.
 
 <img src="../images/ocp-nexus-app2.png" width="600"><br/>
 
