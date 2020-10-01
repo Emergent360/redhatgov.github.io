@@ -145,10 +145,15 @@ $ oc describe pods
 ## We can see those details using the web console too
 Let's look at the image stream.  
 
+ <blockquote>
+ Select the demo-{{< span2 "userid" "YOUR#" >}} project if it's not already selected.
+ </blockquote>
+ <img src="../images/ocp-switch-project.png" width="500"><br/><br/>
+ 
 <blockquote>
 Click on "Developer", in the top left corner, and change it to "Administrator"
 </blockquote>
-<img src="../images/ocp-menu-administrator.png" width="300"><br/>
+<img src="../images/ocp-menu-administrator.png" width="300"><br/><br/>
 
 <blockquote>
 Click on "Builds", in the left-side menu, and then "Image Streams"
