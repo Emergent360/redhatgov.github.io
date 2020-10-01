@@ -53,11 +53,20 @@ Click "+Add", to add a new item to the project
 <blockquote>
 Click "Container Image", to add an existing image from the container registry
 </blockquote>
-<img src="../images/ocp-ContainerImageButton.png" width="300"><br/>
+<img src="../images/ocp-ContainerImageButton.png" width="300"><br/><br/>
 
 <blockquote>
-In the dialog box under the default radio button, "Image name from external registry", enter "quay.io/openshifthomeroom/workshop-terminal", the image should be "Validated" when found.
+In the dialog box under the default radio button, "Image name from external registry", enter:
 </blockquote>
+
+``
+quay.io/openshifthomeroom/workshop-terminal
+``
+
+<blockquote>
+The image should be "Validated" when found.
+</blockquote>
+
 <img src="../images/ocp-deploy-image.png" width="600"><br/>
 
 <blockquote>
