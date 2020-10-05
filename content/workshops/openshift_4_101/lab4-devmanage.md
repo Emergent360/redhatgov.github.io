@@ -16,10 +16,12 @@ From the previous lab you should have the DC Metro Maps web app running in OpenS
 Only if you don't already have it running, add it with the following steps.
 {{% /alert %}}
 
-> <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
+> <i class="fa fa-terminal"></i> Go to the terminal and type these two commands:
 
 ```bash
 $ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map
+```
+```bash
 $ oc expose service dc-metro-map
 ```
 
@@ -30,20 +32,20 @@ Unlike in previous versions of OpenShift, there is no more ambiguity or confusio
 {{% panel "CLI Steps" %}}
 
 <blockquote>
-<i class="fa fa-terminal"></i> Goto the terminal and type the following:
+<i class="fa fa-terminal"></i> Go to the terminal and type the following:
 </blockquote>
 
 ```bash
 $ oc status
 ```
 
-This is going to show the status of your current project.  In this case it will show the dc-metro-map service (svc) with a nested deployment config(also called a "DC") along with some more info that you can ignore for now.  
+This is going to show the status of your current project.  In this case it will show the <i>dc-metro-map</i> service (svc) with a nested deployment config (also called a <i>dc</i>, as displayed on the command line) along with some more info that you can ignore for now.  
 
 <blockquote>
 <i class="fa fa-info-circle"></i>  A deployment in OpenShift is a replication controller based on a user defined template called a deployment configuration <br/>
 </blockquote>
 
-The dc provides us details we care about to see where our application image comes from, so let's check it out in more detail.
+The <i>dc</i> provides us details we care about to see where our application image comes from, so let's check it out in more detail.
 
 <blockquote>
 <i class="fa fa-terminal"></i> Type the following to find out more about our dc:
