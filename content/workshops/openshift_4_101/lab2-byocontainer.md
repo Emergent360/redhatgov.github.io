@@ -9,7 +9,7 @@ layout: lab
 It's easy to get started with OpenShift whether you're using our app templates or bringing your existing assets.  In this quick lab we will deploy an application using an exisiting container image.  OpenShift will create an image stream for the image as well as deploy and manage containers based on that image.  And we will dig into the details to show how all that works.
 
 ## Let's point OpenShift to an existing built container image
-
+We can do this either via the command line (CLI) <strong>or</strong> the web console.  You decide which you'd rather do and follow the steps below.
 {{< panel_group >}}
 {{% panel "CLI Steps" %}}
 
