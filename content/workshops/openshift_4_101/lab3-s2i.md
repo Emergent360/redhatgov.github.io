@@ -9,7 +9,7 @@ layout: lab
 One of the useful components of OpenShift is its source-to-image capability.  S2I is a framework that makes it easy to turn your source code into runnable images.  The main advantage of using S2I for building reproducible docker images is the ease of use for developers.  You'll see just how simple it can be in this lab.
 
 ## Let's build a node.js web app, using S2I
-We can do this either via the command line or the web console.  You decide which you'd rather do and follow the steps below.
+We can do this either via the command line (CLI) <strong>or</strong> the web console.  You decide which you'd rather do and follow the steps below.
 
 {{< panel_group >}}
 {{% panel "CLI Steps" %}}
@@ -20,6 +20,8 @@ We can do this either via the command line or the web console.  You decide which
 
 ```bash
 $ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map
+```
+```bash
 $ oc expose service dc-metro-map
 ```
 
@@ -34,41 +36,41 @@ When using the CLI, OpenShift automatically detects the source code type and sel
 <blockquote>
 Switch to developer mode, if you're not already there
 </blockquote>
-<img src="../images/ocp-switch-developer.png" width="500"><br/>
+<img src="../images/ocp-switch-developer.png" width="500"><br/><br/>
 
 <blockquote>
 Click "+Add"
 </blockquote>
-<img src="../images/ocp-addToProjectButton.png" width="450"><br/>
+<img src="../images/ocp-addToProjectButton.png" width="450"><br/><br/>
 
 <blockquote>
 Click "From Git"
 </blockquote>
-<img src="../images/ocp-FromGitButton.png" width="200"><br/>
+<img src="../images/ocp-FromGitButton.png" width="200"><br/><br/>
 
 <blockquote>
-Fill out the "Git Repo URL" field as follows:
+Enter the following in "Git Repo URL":
 </blockquote>
-<p>
-<table>
-<tr><td><b>Git Repo URL</b></td><td><a href>https://github.com/RedHatGov/openshift-workshops.git</a></td></tr>
-</table>
+
+``https://github.com/RedHatGov/openshift-workshops.git``
 
 <img src="../images/ocp-git-dc-metro-map.png" width="700"><br/>
 
 <br>Ensure that the repository is validated (as shown above)</br><br>
 
 <blockquote>
-Click on the "Show Advanced Git Options" expender
+Click on the "Show Advanced Git Options" expander
 </blockquote>
 <img src="../images/ocp-lab-s2i-ago.png" width="200"><br/><br>
 
 <blockquote>
 Fill out the "Context Dir" field as follows:
 </blockquote>
-<p>
+
 <table>
-<tr><td><b>Context Dir</b></td><td>/dc-metro-map</td></tr>
+<tr><td><b>Context Dir</b></td><td>
+<code>/dc-metro-map</code>
+</td></tr>
 </table>
 
 
@@ -87,14 +89,16 @@ Fill out the fields, under "General" as follows:
 </blockquote>
 <p>
 <table>
-<tr><td><b>Application</b></td><td>Create Application</td></tr>
-<tr><td><b>Application Name</b></td><td>dc-metro-map</td></tr>
-<tr><td><b>Name</b></td><td>dc-metro-map</td></tr>
+<tr><td><b>Application</b><br/>
+(not visible in version 4.4+)
+</td><td><code>Create Application</code></td></tr>
+<tr><td><b>Application Name</b></td><td><code>dc-metro-map</code></td></tr>
+<tr><td><b>Name</b></td><td><code>dc-metro-map</code></td></tr>
 </table>
 </p>
 
 <blockquote>
-Choose "Deployment Configuration" 
+Choose "Deployment Config" 
 </blockquote>
 <img src="../images/ocp-lab-s2i-nodejs-dc.png" width="400"><br/>
 
@@ -135,7 +139,7 @@ The console will print out the full log for your build.  Note, you could pipe th
 {{% panel "Web Console Steps" %}}
 
 <blockquote>
-Click on "Topology", the "node"/"dc-metro-map" icon, and then on "View logs"
+Click on "Topology", click the round "dc-metro-map" node icon, then click "View logs" under the <i>Pods</i> section.
 </blockquote>
 <img src="../images/ocp-lab-s2i-topology.png" width="800"><br/>
 
