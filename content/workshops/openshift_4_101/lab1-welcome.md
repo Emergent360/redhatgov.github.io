@@ -32,8 +32,11 @@ Additionally, you can utilize a command line tool to perforrm tasks.
 
 ```bash
 $ oc login {{< urishortfqdn "https://" "api" ":6443" >}} --insecure-skip-tls-verify=true
+```
+The preceding command should output:
+```bash
 Authentication required for {{< urishortfqdn "https://" "api" ":6443" >}} (openshift)
- Username: user{{< span "userid" "YOUR#" >}} Password:
+ Username: student{{< span "userid" "YOUR#" >}} Password:
 Login successful.
 ```
 
@@ -41,16 +44,17 @@ Login successful.
 
 ```bash
 $ oc get projects
+```
+The preceding command should output:
+```bash
 oc get projects
 NAME          DISPLAY NAME   STATUS
 terminal-{{< span2 "userid" "YOUR#" >}}                  Active
 ```
 
-### You will only see the "terminal" project.
+### You will only see the "terminal-{{< span2 "userid" "YOUR#" >}}" project.
 
-> Create a project
-
-Let's tell the terminal command line tool to create and use a new project:
+## Create a new project using the command line
 
 > <i class="fa fa-terminal"></i> Type the following command to create and use the demo project:
 
