@@ -20,6 +20,8 @@ We can do this either via the command line or the web console.  You decide which
 
 ```bash
 $ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map
+```
+```bash
 $ oc expose service dc-metro-map
 ```
 
@@ -126,7 +128,7 @@ Note the name of your build from the above command output and use it to see the 
 </blockquote>
 
 ```bash
-$ oc logs builds/[BUILD_NAME]
+$ oc logs builds/dc-metro-map-1
 ```
 
 The console will print out the full log for your build.  Note, you could pipe this to more or less for easier viewing in the CLI.
@@ -159,9 +161,17 @@ Let's see this app in action!
 $ oc get routes
 ```
 
+Example output:
+```bash
+NAME            HOST/PORT                                               PATH    SERVICES        PORT       TERMINATION  WILDCARD
+dc-metro-map    dc-metro-map-demo.apps.workshopname.workshop.domain             dc-metro-map    8080-tcp                None
+```
+
 <blockquote>
 Copy the HOST/PORT and paste into your favorite web browser:
 </blockquote>
+
+<pre><code>{{< rhocpuri4app "http://dc-metro-map-demo-" "" "" >}}</code></pre>
 
 {{% /panel %}}
 

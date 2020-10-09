@@ -47,14 +47,15 @@ $ oc get projects
 ```
 The preceding command should output:
 ```bash
-oc get projects
 NAME          DISPLAY NAME   STATUS
 terminal-{{< span2 "userid" "YOUR#" >}}                  Active
 ```
 
-### You will only see the "terminal-{{< span2 "userid" "YOUR#" >}}" project.
+### You will only see the "terminal" project.
 
-## Create a new project using the command line
+> Create a project
+
+Let's tell the terminal command line tool to create and use a new project:
 
 > <i class="fa fa-terminal"></i> Type the following command to create and use the demo project:
 

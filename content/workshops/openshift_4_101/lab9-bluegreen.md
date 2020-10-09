@@ -11,9 +11,11 @@ When implementing continuous delivery for your software one very useful techniqu
 ## Before starting
 Before we get started with the Blue/Green deployment lab, lets clean up some of the projects from the previous lab. 
 
-``` bash
+```bash
 $ oc delete all -l app=jenkins-ephemeral
-$ oc delete project cicd-{{< span "userid" "YOUR#" >}}
+```
+```bash
+$ oc delete project cicd-{{< span2 "userid" "YOUR#" >}}
 ```
 
 ## Lets deploy an application
@@ -23,9 +25,13 @@ You should be comfortable deploying an app at this point, but here are the steps
 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
-``` bash
-$ oc new-project bluegreen-{{<span2 "userid" "YOUR#" >}}
-$ oc new-app --name=green https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map
+```bash
+$ oc new-project bluegreen-{{< span2 "userid" "YOUR#" >}}
+```
+```bash
+$ oc new-app --name=green https://github.com/[YOUR GITHUB USERID]/openshift-workshops --context-dir=dc-metro-map
+```
+```bash
 $ oc expose service green
 ```
 
@@ -42,8 +48,8 @@ Use the same commands to deploy this new version of the app, but this time name 
 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
-``` bash
-$ oc new-app --name=blue https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map
+```bash
+$ oc new-app --name=blue https://github.com/[YOUR GITHUB USERID]/openshift-workshops --context-dir=dc-metro-map
 ```
 
 Wait for the "blue" application to become avialable before proceeding.
@@ -59,15 +65,14 @@ Now that we are satisfied with our change we can do the Green/Blue switch.  With
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 
-``` bash
-$ oc edit route green
+```bash
+$ oc edit route green 
 ```
 
 This will bring up the Route configuration yaml. Edit the element "spec:". On the "to:" "name:" line, change its value from "green" to "blue":
 
-```bash
-spec:
-  host: green-bluegreen-{{< span "userid" "YOUR#" >}}.apps.alexocp43.redhatgov.io
+<pre><code data-lang="bash">spec:
+  host: {{< rhocpuri4app "" "green-bluegreen-" "" >}}
   port:
     targetPort: 8080-tcp
   to:
@@ -75,7 +80,7 @@ spec:
     name: blue
     weight: 100
   wildcardPolicy: None
-```
+</code></pre>
 
 {{% /panel %}}
 

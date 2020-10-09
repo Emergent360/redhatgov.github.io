@@ -68,7 +68,11 @@ Okay, now that we have a slightly more interesting replication state, we can tes
 
 ```bash
 $ oc get pods
-$ oc delete pod/PODNAME
+```
+```bash
+$ oc delete pod/[POD NAME]
+```
+```bash
 $ oc get pods -w
 ```
 
@@ -129,7 +133,9 @@ In addition to the health of your application's pods, OpenShift will watch the c
 
 ```bash
 $ oc get pods
-$ oc exec PODNAME -it /bin/bash
+```
+```bash
+$ oc exec [POD NAME] -it /bin/bash
 ```
 
 You are now executing a bash shell running in the container of the pod.  Let's kill our webapp and see what happens.

@@ -20,6 +20,8 @@ Only if you don't already have it running, add it with the following steps.
 
 ```bash
 $ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map
+```
+```bash
 $ oc expose service dc-metro-map
 ```
 
@@ -171,7 +173,7 @@ $ oc logs [POD NAME]
 You will see in the output details of your app starting up and any status messages it has reported since it started.
 
 <blockquote>
-<i class="fa fa-info-circle"></i> You can see more details about the pod itself with 'oc describe pod/<POD NAME>'
+<i class="fa fa-info-circle"></i> You can see more details about the pod itself with 'oc describe pod/[POD NAME]'
 </blockquote>
 
 {{% /panel %}}
@@ -347,6 +349,8 @@ That should return **BEERME=true**, matching the value that we set in the deploy
 
 ```bash
 $ oc delete all -l app=dc-metro-map
+```
+```bash
 $ oc delete secrets dc-metro-map-generic-webhook-secret dc-metro-map-github-webhook-secret    
 ```
   

@@ -112,6 +112,8 @@ Click "Create"
 
 ```bash
 $ oc project demo-{{< span userid "YOUR#" >}}
+```
+```bash
 $ oc get all
 ```
 

@@ -22,10 +22,16 @@ In a previous lab we added our web app using a S2I template.  When we did that, 
 
 ```bash
 $ oc get pods
-$ oc describe pod/<POD NAME> | grep Labels: --context=4
+```
+Replace "[POD NAME]" with the name of your pod:
+```bash
+$ oc describe pod/[POD NAME] | grep Labels: --context=4
+```
+Example output:
+```bash
 Namespace:    demo-1
 Priority:     0
-Node:         ip-10-0-132-38.us-east-2.compute.internal/10.0.132.38
+Node:         ip-11-22-33-44.us-east-2.compute.internal/11.22.33.44
 Start Time:   Tue, 14 Apr 2020 17:41:58 +0000
 Labels:       app=dc-metro-map
               deploymentconfig=dc-metro-map
@@ -41,7 +47,7 @@ You can see the Labels automatically added contain the app, deployment, and depl
 </blockquote>
 
 ```bash
-$ oc label pod/<POD NAME> testdate=4.14.2020 testedby=mylastname
+$ oc label pod/[POD NAME] testdate=4.14.2020 testedby=mylastname
 ```
 
 <blockquote>
@@ -49,10 +55,13 @@ $ oc label pod/<POD NAME> testdate=4.14.2020 testedby=mylastname
 </blockquote>
 
 ```bash
-$ oc describe pod/<POD NAME> | grep Labels: --context=4
+$ oc describe pod/[POD NAME] | grep Labels: --context=4
+```
+Example output:
+```bash
 Namespace:    demo-1
 Priority:     0
-Node:         ip-10-0-132-38.us-east-2.compute.internal/10.0.132.38
+Node:         ip-11-22-33-44.us-east-2.compute.internal/11.22.33.44
 Start Time:   Tue, 14 Apr 2020 17:41:58 +0000
 Labels:       app=dc-metro-map
               deploymentconfig=dc-metro-map

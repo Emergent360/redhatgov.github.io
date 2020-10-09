@@ -102,7 +102,7 @@ $ SECRET=`oc get secrets dc-metro-map-generic-webhook-secret -o yaml | grep -i k
 ```
 
 <blockquote>
-<i class="fa fa-terminal"></i> Last, we can get the URL for the webhook, this way:
+<i class="fa fa-terminal"></i> Last, we can create the URL needed for the webhook, this way:
 </blockquote>
 
 ```bash
@@ -110,17 +110,14 @@ $ oc describe bc/dc-metro-map | grep "Webhook Generic" -A 1 | sed "s/<secret>/${
 ```
 
 <blockquote>
-... which results in the information that we need:
-</blockquote>
-
-```bash
-Webhook Generic:
-        URL:            https://api.alexocp43.redhatgov.io:6443/apis/build.openshift.io/v1/namespaces/cicd-1/buildconfigs/dc-metro-map/webhooks/1234abcd5678efgh/generic
-```
-
-<blockquote>
 Copy the "Webhook Generic" URL to the clipboard, so that we can use it in GitHub.
 </blockquote>
+
+Example output:
+```bash
+Webhook Generic:
+        URL:            https://api.workshopname.workshop.domain/apis/build.openshift.io/v1/namespaces/demo/buildconfigs/dc-metro-map/webhooks/[WEBHOOK SECRET]/generic
+```
 
 {{% /panel %}}
 
@@ -218,6 +215,8 @@ Well, what if something isn't quite right with the latest version of our app?  L
 
 ```bash
 $ oc rollout undo dc/dc-metro-map
+```
+```bash
 $ oc get pods -w
 ```
 
