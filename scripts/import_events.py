@@ -123,10 +123,10 @@ class Event(object):
     @property
     def hash(self):
         m = hashlib.md5()
-        m.update(str(self.start_date))
-        m.update(str(self.end_date))
-        m.update(self.title)
-        m.update(self.location)
+        m.update(str(self.start_date).encode('utf-8'))
+        m.update(str(self.end_date).encode('utf-8'))
+        m.update(self.title).encode('utf-8')
+        m.update(self.location).encode('utf-8')
         return m.hexdigest()
 
     def filename(self):
