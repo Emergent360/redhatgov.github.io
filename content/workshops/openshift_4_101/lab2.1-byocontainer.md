@@ -64,16 +64,4 @@ Change the context menu (the menu, in the top left, that contains "Administrator
 
 <img src="../images/ocp-nexus-app2.png" width="600"><br/>
 
-## Troubleshooting
-
-If you get the following when attempting to browse the route ...<br>
-<img src="../images/ocp-nexus-app.png" width="300"><br/>
-Go to this URL: <br>
-`
-{{< rhocpuri4app "http://" "nexus-demo-" "/nexus/" >}}
-`
-<br>
-This error means you missed a step above to set the path; however, the container is running ... 
-
-
 {{< importPartial "footer/footer.html" >}}
