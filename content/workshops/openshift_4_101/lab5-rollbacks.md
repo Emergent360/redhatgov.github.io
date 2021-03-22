@@ -87,7 +87,7 @@ The node.js builder template creates a number of resources for you, but what we 
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -244,7 +244,7 @@ This will not work in today's workshop, as we have not yet made a second deploym
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>

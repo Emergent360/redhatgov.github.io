@@ -16,7 +16,7 @@ We can see the details of what the S2I builder did.  This can be helpful to diag
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -65,7 +65,7 @@ Let's see this app in action!
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>

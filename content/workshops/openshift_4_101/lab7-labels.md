@@ -19,7 +19,7 @@ In a previous lab we added our web app using a S2I template.  When we did that, 
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>

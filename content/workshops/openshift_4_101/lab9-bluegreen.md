@@ -14,7 +14,7 @@ Before we get started with the Blue/Green deployment lab, lets clean up some of 
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 ``` bash
@@ -31,7 +31,7 @@ You should be comfortable deploying an app at this point, but here are the steps
 
 ``` bash
 $ oc new-project bluegreen-{{<span2 "userid" "YOUR#" >}}
-$ oc new-app --name=green https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map --as-deployment-config=true
+$ oc new-app --name=green https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map
 $ oc expose service green
 ```
 
@@ -49,7 +49,7 @@ Use the same commands to deploy this new version of the app, but this time name 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
 ``` bash
-$ oc new-app --name=blue https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map --as-deployment-config=true
+$ oc new-app --name=blue https://github.com/your-github-uid-goes-here/openshift-workshops --context-dir=dc-metro-map
 ```
 
 Wait for the "blue" application to become avialable before proceeding.
@@ -64,7 +64,7 @@ Now that we are satisfied with our change we can do the Green/Blue switch.  With
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
       
 <blockquote>

@@ -21,7 +21,7 @@ Unlike in previous versions of OpenShift, there is no more ambiguity or confusio
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -154,7 +154,7 @@ In the S2I lab we looked at a build log to inspect the process of turning source
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -229,7 +229,7 @@ Whether it's a database name or a configuration variable, most applications make
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 Let's have a little fun.  The app has some easter eggs that get triggered when certain environment variables are set to 'true'.
@@ -315,7 +315,7 @@ There are situations when you might want to jump into a running pod, and OpenShi
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -387,7 +387,7 @@ That should return **BEERME=true**, matching the value that we set in the deploy
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 > <i class="fa fa-terminal"></i> Let's clean up all this to get ready for the next lab:

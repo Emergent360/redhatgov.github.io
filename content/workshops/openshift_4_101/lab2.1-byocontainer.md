@@ -7,7 +7,7 @@ layout: lab
 
 ## Now that we have a running container, we can browse our project details with the command line
 ``
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 ``
 
 > <i class="fa fa-terminal"></i> Try typing the following to see what is available to 'get':

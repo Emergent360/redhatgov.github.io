@@ -20,7 +20,7 @@ Create a new project named “cicd-{{< span "userid" "YOUR#" >}}”.
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <i class="fa fa-terminal"></i> Create the project cicd-{{< span "userid" "YOUR#" >}}
@@ -70,11 +70,11 @@ Fill in the Name and Display Name of the project as "cicd-{{< span "userid" "YOU
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 ```bash
-$ oc new-app jenkins-ephemeral --as-deployment-config=true
+$ oc new-app jenkins-ephemeral
 $ oc logs -f dc/jenkins
 ```
 
@@ -144,6 +144,11 @@ Go to "Topology", select the deployment configuration for jenkins, under details
 
 ## Create a sample application configuration
 
+If you are following the Web Console steps, first make sure you are in the "cicd-{{< span "userid" "YOUR#" >}}" project
+
+```bash
+oc project cicd-{{< span "userid" "YOUR#" >}}
+```
 
 ```bash
 $ oc create -f https://raw.githubusercontent.com/openshift/origin/master/examples/jenkins/pipeline/nodejs-sample-pipeline.yaml
@@ -158,7 +163,7 @@ $ oc create -f https://raw.githubusercontent.com/openshift/origin/master/example
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -214,7 +219,7 @@ Once logged in, click the [Allow selected permissions] button and you should see
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <i class="fa fa-terminal"></i> Launch the pipeline:

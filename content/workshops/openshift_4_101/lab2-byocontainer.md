@@ -38,7 +38,7 @@ By default, create a new project will default you to "using" that project.  In t
 <hr>
 Now, let's launch a pre-existing container from a container registry.
 
-<pre><code style="color:#FFFFFF">$ oc new-app sonatype/nexus:oss --as-deployment-config=true
+<pre><code style="color:#FFFFFF">$ oc new-app sonatype/nexus:oss
 </code></pre>
 
 <hr>

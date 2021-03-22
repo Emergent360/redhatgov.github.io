@@ -18,7 +18,7 @@ Note: When using the CLI, OpenShift automatically detects the source code type a
 ### Terminal access
 
 <pre>
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 </pre>
 
 <blockquote>
@@ -26,7 +26,7 @@ Note: When using the CLI, OpenShift automatically detects the source code type a
 </blockquote>
 
 <pre><code style="color:#FFFFFF">$ oc project demo-{{< span2 userid "YOUR#" >}}
-$ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map --as-deployment-config=true
+$ oc new-app --name=dc-metro-map https://github.com/RedHatGov/openshift-workshops.git --context-dir=dc-metro-map
 $ oc expose service dc-metro-map
 </code></pre>
 

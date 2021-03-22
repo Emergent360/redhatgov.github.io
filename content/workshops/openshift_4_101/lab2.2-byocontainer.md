@@ -7,7 +7,7 @@ layout: lab
 
 ### Terminal access
 ``
-{{< urishortfqdn "https://" "console-openshift-console.apps" "/terminal" >}}
+http://workshop-terminal-terminal-{{< span2 userid "YOUR#" >}}.{{< urishortfqdn "" "apps" "" >}}
 ``
 
 ## Let's clean this up
