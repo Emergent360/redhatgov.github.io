@@ -230,7 +230,7 @@
   function setWorkshopFooterData() {
     //Sets the cookies, nom nom nom...
     Cookies2.set("domain", jQuery("select#domain").val(), { path: cookiePath, expires: 7 } );
-    Cookies2.set("prefix", jQuery("input#prefix").val(), { path: cookiePath, expires: 7 } );
+    Cookies2.set("prefix", jQuery("input#prefix").val().replace(/\W/g, ''), { path: cookiePath, expires: 7 } );
     Cookies2.set("userid", jQuery("select#userid").val(), { path: cookiePath, expires: 7 } );
     replaceClassText();
     modal.style.display = "none";
